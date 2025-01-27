@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Offline Appointments</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        .container {
+            width: 100%;
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .location-map {
+            width: 300px;
+            height: 220px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="main-content">
+        <div class="menu">
+            <table class="menu-container" border="0">
+                <tr>
+                    <td class="pt-5 px-3" colspan="2">
+                        <table border="0" class="profile-container">
+                            <tr>
+                                <td width="30%" style="padding-left:20px">
+                                    <img src="img/user.png" alt="Admin Profile Picture" width="105%"
+                                        style="border-radius:50%">
+                                </td>
+                                <td>
+                                    <p class="profile-title">Administrator</p>
+                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="#"><input type="button" value="Log out"
+                                            class="logout-btn btn-primary-soft button"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p> </p>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-dashbord">
+                        <a href="index.html" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Dashboard</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-doctor">
+                        <a href="doctors.html" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Doctors</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-schedule">
+                        <a href="schedule.html" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Schedule</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-appoinment menu-active menu-icon-appoinment-active">
+                        <a href="appointment.html" class="non-style-link-menu non-style-link-menu-active">
+                            <div>
+                                <p class="menu-text">Appointment</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-patient">
+                        <a href="patient.html" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Patients</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="dash-body">
+            <table border="0" width="100%" style="margin-top:25px;">
+                <tr>
+                    <td colspan="2" class="nav-bar">
+                        <form action="doctors.html" method="post" class="header-search">
+
+                            <input type="search" name="search" class="input-text header-searchbar"
+                                placeholder="Search Doctor name or Email" list="doctors">
+
+                            <input type="Submit" value="Search" class="login-btn btn-primary-soft button"
+                                style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+
+                        </form>
+                    </td>
+
+                    <td width="15%">
+                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
+                            Today's Date
+                        </p>
+                        <p class="heading-sub12" style="padding: 0;margin: 0;"> </p>
+                    </td>
+
+                    <td width="10%">
+                        <button class="btn-label" style="display: flex;justify-content: center;align-items: center;">
+                            <img src="img/calendar.svg" width="100%">
+                        </button>
+                    </td>
+
+                </tr>
+            </table>
+
+            <div class="container">
+                <h2 class="text-center mb-4">Book Your Offline Appointment</h2>
+                <div class="card mb-4">
+                    <div class="card-header">Company Information</div>
+                    <div class="imformation d-flex justify-content-between px-4 py-2">
+                        <div class="card-body">
+                            <p><i class="bi bi-buildings-fill pe-2" style="color: gray;"></i><strong>Company:</strong> Gowthamraj Networks</p>
+                            <p><i class="bi bi-geo-fill pe-2" style="color: gray;"></i><strong>Address:</strong> 1234 Business Street</p>
+                            <p style="padding-left: 90px;" style="color: gray;"> City, State, ZIP </p>
+                            <p><i class="bi bi-phone-fill pe-1" style="color: gray;"></i> <strong>Phone:</strong> Phone: (123) 456-7890 </p>
+                            <p><i class="bi bi-envelope-fill pe-1" style="color: gray;"></i> <strong>Email:</strong> contact@company.com</p>
+                        </div>
+
+                        
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.268931717126!2d144.9631!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d54e7b28bb7%3A0x5045675218ce6e0!2zQ2hlc3Rh!5e0!3m2!1sen!2sus!4v1615191617160!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        </div> 
+                    </div>
+                </div>
+                <form id="appointmentForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Preferred Time</label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Reason for Appointment</label>
+                        <textarea class="form-control" id="reason" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+                </form>
+                <div id="confirmationMessage" class="alert alert-success mt-3 d-none">Your offline appointment has been
+                    booked successfully!</div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
