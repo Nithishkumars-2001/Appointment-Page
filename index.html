@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Appointments</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <main class="main-content">
+        <div class="menu">
+            <table class="menu-container" border="0">
+                <tr>
+                    <td class="pt-5 px-3" colspan="2">
+                        <table border="0" class="profile-container">
+                            <tr>
+                                <td width="30%" style="padding-left:20px">
+                                    <img src="img/user.png" alt="Admin Profile Picture" width="105%"
+                                        style="border-radius:50%">
+                                </td>
+                                <td>
+                                    <p class="profile-title">User</p>
+                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="signin.html"><input type="button" value="Log out"
+                                            class="logout-btn btn-primary-soft button"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p> </p>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-dashbord menu-active menu-icon-dashbord-active">
+                        <a href="index.html" class="non-style-link-menu non-style-link-menu-active">
+                            <div>
+                                <p class="menu-text">Dashboard</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-appoinment">
+                        <a href="appointment.html" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Appointment</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!--Side navbar-->
+        <div class="side-navbar">
+            <p class="cross-symbol" onclick="closenavbar()"> <i class="bi bi-x"></i> </p>
+
+            <div class="user-profile">
+                <img src="img/user.png" alt="Profile Picture" style="border-radius:50%;">
+
+                <p class="user-name"> User </p>
+                <p class="user-mail"> admin@edoc.com </p>
+            </div>
+
+            <a href="signin.html"><input type="button" value="Log out" class="logout-btn btn-primary-soft button"
+                    style="width: 100%;margin-top: 10px;"> </a>
+
+            <p class="line" style="background-color: gainsboro;width: 100%;height: 2px;"> </p>
+
+            <div class="side-menu">
+                <i class="bi bi-card-text"></i>
+                <a href="index.html">
+                    <p class="menu-text">Dashboard</p>
+                </a>
+            </div>
+
+            <div class="side-menu">
+                <i class="bi bi-bookmark"></i>
+                <a href="appointment.html">
+                    <p class="menu-text">Appointment</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="dash-body">
+            <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;">
+                <tr class="landscape-menu">
+                    <td colspan="2" class="nav-bar">
+                        <form action="#" method="post" class="header-search">
+                            <input type="search" name="search" class="input-text header-searchbar"
+                                placeholder="Search Name or Email" list="doctors">
+                            <input type="Submit" value="Search" class="login-btn btn-primary-soft button"
+                                style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                        </form>
+                    </td>
+
+                    <td width="15%">
+                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
+                            Today's Date
+                        </p>
+                        <p class="heading-sub12" style="padding: 0;margin: 0;">
+
+                        </p>
+                    </td>
+
+                    <td width="10%">
+                        <button class="btn-label"
+                            style="display: flex;justify-content: center;align-items: center;"><img
+                                src="img/calendar.svg" width="100%"></button>
+                    </td>
+                </tr>
+
+                <tr class="protrait-menu">
+                    <td>
+                        <p style="font-size: 20px;padding-left:12px;font-weight: 600;">Dashboard</p>
+                    </td>
+
+                    <td>
+                        <i class="bi bi-list" onclick="shownavbar()"
+                            style="color: black; font-size: 25px;cursor: pointer;font-weight: 900;">
+                        </i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+
+                        <center>
+                            <table class="filter-container" style="border: none; border: 0">
+                                <tr>
+                                    <td colspan="4">
+                                        <p style="font-size: 20px;font-weight:600;padding-top: 10px;">Status</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-sm-6 col-md-3 mb-2">
+                                        <div class="dashboard-items"
+                                            style="padding:20px;margin:auto;width:95%;display: flex;justify-content: space-between;">
+                                            <div>
+                                                <div class="h1-dashboard">
+
+                                                </div><br>
+                                                <div class="h3-dashboard">
+                                                    Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="btn-icon-back dashboard-icons"
+                                                style="background-image: url('img/icons/doctors-hover.svg');"></div>
+                                        </div>
+                                    </td>
+
+                                    <td class="col-12 col-md-3 mb-2">
+                                        <div class="dashboard-items"
+                                            style="padding:20px;margin:auto;width:95%;display: flex;justify-content: space-between;">
+                                            <div>
+                                                <div class="h1-dashboard">
+
+                                                </div><br>
+                                                <div class="h3-dashboard">
+                                                    Patients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="btn-icon-back dashboard-icons"
+                                                style="background-image: url('img/icons/patients-hover.svg');"></div>
+                                        </div>
+                                    </td>
+
+                                    <td class="col-12 col-md-3 mb-2">
+                                        <div class="dashboard-items"
+                                            style="padding:20px;margin:auto;width:95%;display: flex;justify-content: space-between;">
+                                            <div>
+                                                <div class="h1-dashboard">
+
+                                                </div><br>
+                                                <div class="h3-dashboard">
+                                                    NewBooking &nbsp;&nbsp;
+                                                </div>
+                                            </div>
+                                            <div class="btn-icon-back dashboard-icons"
+                                                style="margin-left: 0px;background-image: url('img/icons/book-hover.svg');">
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td class="col-12 col-md-3 mb-2">
+                                        <div class="dashboard-items"
+                                            style="padding:20px;margin:auto;width:95%;display: flex;justify-content: space-between;padding-top: 26px;padding-bottom: 26px;">
+                                            <div>
+                                                <div class="h1-dashboard">
+
+                                                </div><br>
+                                                <div class="h3-dashboard" style="font-size: 15px">
+                                                    Today Sessions
+                                                </div>
+                                            </div>
+                                            <div class="btn-icon-back dashboard-icons"
+                                                style="background-image: url('img/icons/session-iceblue.svg');">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+                    </td>
+                </tr>
+
+                
+                <!--New section for Online and Offline Appointments -->
+                
+                <tr class="landscape-menu">
+                    <td colspan="4">
+                        <table width="100%" border="0" class="dashbord-tables">
+
+                            <tr class="row">
+                                <td class=" col-12 col-md-6">
+                                    <p
+                                        style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                        Online Appointments
+                                    </p>
+
+                                    <div class="abc scroll" style="height: 200px;">
+                                        <table width="100%" class="sub-table scrolldown" border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-headin">Name</th>
+                                                    <th class="table-headin">Email</th>
+                                                    <th class="table-headin">Date</th>
+                                                    <th class="table-headin">Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="onlineAppointmentsBody">
+                                                <!-- Online appointments will be dynamically inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+
+                                <td class=" col-12 col-md-6">
+                                    <p
+                                        style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                        Offline Appointments
+                                    </p>
+
+                                    <div class="abc scroll" style="height: 200px;">
+                                        <table width="100%" class="sub-table scrolldown" border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-headin">Name</th>
+                                                    <th class="table-headin">Email</th>
+                                                    <th class="table-headin">Date</th>
+                                                    <th class="table-headin">Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="offlineAppointmentsBody">
+                                                <!-- Offline appointments will be dynamically inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr> 
+
+                <!--New section for Online and Offline Appointments -->
+                <tr class="protrait-menu">
+                    <td colspan="4">
+                        <table width="100%" border="0" class="dashbord-tables">
+
+                            <tr class="row">
+                                <td class=" col-12 col-md-6">
+                                    <p
+                                        style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                        Online Appointments
+                                    </p>
+
+                                    <div class="abc scroll" style="height: 200px;">
+                                        <table width="100%" class="sub-table scrolldown" border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-headin">Name</th>
+                                                    <th class="table-headin">Email</th>
+                                                    <th class="table-headin">Date</th>
+                                                    <th class="table-headin">Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="onlineAppointmentsBody">
+                                                <!-- Online appointments will be dynamically inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+
+                                <td class=" col-12 col-md-6">
+                                    <p
+                                        style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                        Offline Appointments
+                                    </p>
+
+                                    <div class="abc scroll" style="height: 200px;">
+                                        <table width="100%" class="sub-table scrolldown" border="0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="table-headin">Name</th>
+                                                    <th class="table-headin">Email</th>
+                                                    <th class="table-headin">Date</th>
+                                                    <th class="table-headin">Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="offlineAppointmentsBody">
+                                                <!-- Offline appointments will be dynamically inserted here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </main>
+
+    <script>
+        //select sidenavbar
+        var sidenavbar = document.querySelector(".side-navbar")
+
+        function shownavbar() {
+            sidenavbar.style.left = "0"
+        }
+        function closenavbar() {
+            sidenavbar.style.left = "-75%"
+        }
+
+
+        window.onload = function () {
+            // Load online appointments
+            const onlineAppointments = JSON.parse(localStorage.getItem('onlineAppointments')) || [];
+            const onlineAppointmentsBody = document.getElementById('onlineAppointmentsBody');
+            onlineAppointments.forEach(appointment => {
+                const row = `<tr>
+                                <td>${appointment.name}</td>
+                                <td>${appointment.email}</td>
+                                <td>${appointment.date}</td>
+                                <td>${appointment.time}</td>
+                            </tr>`;
+                onlineAppointmentsBody.innerHTML += row;
+            });
+
+            // Load offline appointments
+            const offlineAppointments = JSON.parse(localStorage.getItem('offlineAppointments')) || [];
+            const offlineAppointmentsBody = document.getElementById('offlineAppointmentsBody');
+            offlineAppointments.forEach(appointment => {
+                const row = `<tr>
+                                <td>${appointment.name}</td>
+                                <td>${appointment.email}</td>
+                                <td>${appointment.date}</td>
+                                <td>${appointment.time}</td>
+                            </tr>`;
+                offlineAppointmentsBody.innerHTML += row;
+            });
+        };
+
+    </script>
+
+</body>
+
+</html>
