@@ -1,7 +1,8 @@
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  border-spacing: 0;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
 }
 
@@ -253,7 +254,7 @@
   height: 100%;
   position: fixed;
   top: 0;
-  left: -80%;
+  left: -85%;
   padding: 20px;
   transition: 2s;
   z-index: 5;
@@ -312,7 +313,6 @@
   margin: 0;
 }
 
-
 /* Dashboard */
 
 .dashboard-items {
@@ -345,12 +345,40 @@
   border-radius: 7px;
   margin-left: 40px;
   margin-right: 0px;
-
 }
+
+.abc {
+  width: 100%;
+  height: 550px;
+  overflow-x: auto;
+}
+
+.abc::-webkit-scrollbar {
+  width: 10px;
+}
+
+.abc::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 20px;
+}
+
+.abc::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.sub-table {
+  width: 120%;
+}
+
+.appointment-data {
+  width: 100%;
+}
+
+
 
 /* offline appointment */
 
-.imformation{
+.imformation {
   display: flex;
   justify-content: space-between;
 }
@@ -362,39 +390,39 @@
 
 /*     ================================     Sign page    ===================================       */
 
-.company-brand{
+.company-brand {
   background: url(img/brand-bg.jpg) no-repeat;
   background-size: cover;
   width: 100%;
   height: auto;
   background-position: 50% 50%;
 }
-  
-.company-brand img{
+
+.company-brand img {
   margin-top: 200px;
 }
 
-.company-brand h1{
+.company-brand h1 {
   color: orangered;
   text-shadow: 2px 2px 4px black;
   font-size: 50px;
 }
 
-.form-control{
+.form-control {
   height: 50px;
-  outline:none;
+  outline: none;
 }
 
-.check-frogot{
+.check-frogot {
   display: flex;
   justify-content: space-between;
 }
 
-.text-center a{
+.text-center a {
   color: black;
 }
 
-.sign-btn button{
+.sign-btn button {
   display: block;
   margin: 0 auto;
   border: none;
@@ -407,24 +435,23 @@
   border-radius: 10px;
 }
 
-.sign-google-facebook button{
+.sign-google-facebook button {
   border: 1px solid black;
   height: 40px;
 }
 
-.sign-google-facebook button a{
+.sign-google-facebook button a {
   color: black;
   text-decoration: none;
 }
 
 /*     ================================     Register page    ===================================       */
 
-
-.register-form input::placeholder{
+.register-form input::placeholder {
   color: rgb(211, 194, 194);
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .menu {
     display: none;
   }
@@ -445,9 +472,9 @@
     display: flex;
   }
 
-  .imformation{
+  .imformation {
     display: inline-block;
-    
+
   }
 
   .location-map {
@@ -455,8 +482,177 @@
     height: 150px;
   }
 
-  .sign-btn button{
+  .sign-btn button {
     width: 100%;
+  }
+
+  .abc {
+    width: 100%;
+  }
+
+  .sub-table {
+    width: 180%;
+  }
+}
+
+
+/* Teachers Slider */
+
+.teachers-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70px 50px;
+}
+
+.card-list .card-item {
+  color: rgb(77, 146, 207);
+  user-select: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  backdrop-filter: blur(30px);
+  background: rgb(244, 246, 247);
+  border: 1px solid rgb(163, 193, 219);
+}
+
+.card-list .card-item .teacher-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid rgb(162, 194, 219);
+  padding: 4px;
+}
+
+.card-list .card-item .teacher-profession {
+  font-size: 1.12rem;
+  color: rgb(45, 53, 61);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.card-list .card-item .message-btn {
+  font-size: 1.25rem;
+  padding: 10px 35px;
+  color: rgb(77, 146, 207);
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid rgb(163, 193, 219);
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .message-btn:hover {
+  background: rgb(77, 146, 207);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+  background: #000;
+  height: 15px;
+  width: 15px;
+}
+
+.slider-wrapper .swiper-slider-button {
+  color: #000;
+  margin-top: -50px;
+}
+
+.box {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box:hover {
+  background-color: #f8f9fa;
+}
+
+.teacher-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: hidden;
+  gap: 20px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.teacher-card {
+  flex: 0 0 auto;
+  width: 250px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.achievement-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(163, 193, 219);
+}
+
+.progress {
+  height: 10px;
+}
+
+.teachers-placement-helps{
+  margin-top: 40px;
+}
+
+.company-img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.company-img img{
+  width: 150px;
+  height: 100px;
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 10px 40px;
+  }
+
+  .slider-wrapper .swiper-slider-button {
+    display: none;
+  }
+
+  .company-img {
+    gap: 10px;
+  }
+
+  .company-img img {
+    width: 80px;
+    height: 50px;
+    padding: 5px;
   }
 }
 
@@ -489,16 +685,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
------------Buttons--------------- .btn-primary {
+.btn-primary {
   background-color: var(--primarycolor);
   border: 1px solid var(--primarycolor);
   color: #fff;
@@ -533,8 +720,6 @@
 }
 
 
-
-
 .heading-main12 {
   font-weight: 500;
   font-size: 25px;
@@ -551,7 +736,7 @@
 
 }
 
-/* ***************************************************************/
+/* **************************************************************  */
 
 @import url('font-inter.css');
 
@@ -562,41 +747,35 @@
   --btnnicetext: #1b62b3;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  border-spacing: 0;
-  font-family: 'Inter', sans-serif;
-
-}
-
+/*
 *,
 ::after,
 ::before {
   box-sizing: border-box;
 }
 
-/*------custom-scrol-----*/
-/* width */
+
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 12px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+} */
+
+
+
 
 .sub-table {
   border: 1px solid #ebebeb;
@@ -616,8 +795,6 @@ body {
 .filter-container-items {
   margin-top: 7.5px;
   margin-left: 20px;
-
-
 }
 
 .table-headin {
@@ -625,12 +802,6 @@ body {
   font-weight: 500;
   padding: 10px;
   border-bottom: 3px solid var(--primarycolor);
-}
-
-.abc {
-  width: 100%;
-  height: 550px;
-  overflow: auto;
 }
 
 .overlay {
@@ -882,7 +1053,7 @@ input[type=search]:focus {
   transition: 0.5s;
 }
 
-.appointment-data{
+.appointment-data {
   overflow-x: scroll;
 }
 
@@ -926,4 +1097,3 @@ input[type=search]:focus {
     margin-bottom: 15px;
   }
 }
-

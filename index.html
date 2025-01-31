@@ -169,19 +169,21 @@
 
                                 <tr class="row">
                                     <td class="col-sm-6 col-md-3 mb-2">
-                                        <div class="dashboard-items"
-                                            style="padding:20px;margin:auto;width:95%;display: flex;justify-content: space-between;">
-                                            <div>
-                                                <div class="h1-dashboard">
+                                        <a href="teachers.html" style="text-decoration: none;">
+                                            <div class="dashboard-items"
+                                                style="padding:20px;margin:auto;width:95%;display: flex;justify-content: space-between;">
+                                                <div>
+                                                    <div class="h1-dashboard">
 
-                                                </div><br>
-                                                <div class="h3-dashboard">
-                                                    Teacher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </div><br>
+                                                    <div class="h3-dashboard">
+                                                        Teacher &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </div>
                                                 </div>
+                                                <div class="btn-icon-back dashboard-icons"
+                                                    style="background-image: url('img/icons/doctors-hover.svg');"></div>
                                             </div>
-                                            <div class="btn-icon-back dashboard-icons"
-                                                style="background-image: url('img/icons/doctors-hover.svg');"></div>
-                                        </div>
+                                        </a>
                                     </td>
 
                                     <td class="col-12 col-md-3 mb-2">
@@ -208,7 +210,7 @@
 
                                                 </div><br>
                                                 <div class="h3-dashboard">
-                                                    NewBooking &nbsp;&nbsp;
+                                                    New Booking &nbsp;&nbsp;
                                                 </div>
                                             </div>
                                             <div class="btn-icon-back dashboard-icons"
@@ -239,9 +241,7 @@
                     </td>
                 </tr>
 
-                
-                <!--New section for Online and Offline Appointments -->
-                
+                <!--New section for Online and Offline Appointments
                 <tr class="landscape-menu">
                     <td colspan="4">
                         <table width="100%" border="0" class="dashbord-tables">
@@ -264,7 +264,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="onlineAppointmentsBody">
-                                                <!-- Online appointments will be dynamically inserted here -->
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -287,7 +287,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="offlineAppointmentsBody">
-                                                <!-- Offline appointments will be dynamically inserted here -->
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -297,7 +297,6 @@
                     </td>
                 </tr> 
 
-                <!--New section for Online and Offline Appointments -->
                 <tr class="protrait-menu">
                     <td colspan="4">
                         <table width="100%" border="0" class="dashbord-tables">
@@ -320,7 +319,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="onlineAppointmentsBody">
-                                                <!-- Online appointments will be dynamically inserted here -->
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -343,7 +342,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="offlineAppointmentsBody">
-                                                <!-- Offline appointments will be dynamically inserted here -->
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -351,9 +350,65 @@
                             </tr>
                         </table>
                     </td>
-                </tr>
+                </tr> -->
 
             </table>
+
+            <!-- New section for Online and Offline Appointments -->
+            <div style="width: 100%;overflow: scroll;padding: 10px;">
+                <div colspan="4">
+                    <table width="100%" border="0" class="dashbord-tables">
+
+                        <tr class="row">
+                            <td class=" col-12 col-md-6">
+                                <p
+                                    style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                    Online Appointments
+                                </p>
+
+                                <div class="abc scroll" style="height: 200px;">
+                                    <table width="100%" class="sub-table scrolldown" border="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="table-headin">Name</th>
+                                                <th class="table-headin">Email</th>
+                                                <th class="table-headin">Date</th>
+                                                <th class="table-headin">Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="onlineAppointmentsBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+
+                            <td class=" col-12 col-md-6">
+                                <p
+                                    style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                                    Offline Appointments
+                                </p>
+
+                                <div class="abc scroll" style="height: 200px;">
+                                    <table width="100%" class="sub-table scrolldown" border="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="table-headin">Name</th>
+                                                <th class="table-headin">Email</th>
+                                                <th class="table-headin">Date</th>
+                                                <th class="table-headin">Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="offlineAppointmentsBody">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -366,7 +421,7 @@
             sidenavbar.style.left = "0"
         }
         function closenavbar() {
-            sidenavbar.style.left = "-75%"
+            sidenavbar.style.left = "-85%"
         }
 
 
