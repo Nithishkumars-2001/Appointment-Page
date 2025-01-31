@@ -560,13 +560,13 @@
 }
 
 .slider-wrapper .swiper-pagination-bullet {
-  background: #000;
+  background: rgb(57, 140, 213);
   height: 15px;
   width: 15px;
 }
 
 .slider-wrapper .swiper-slider-button {
-  color: #000;
+  color: rgb(77, 146, 207);
   margin-top: -50px;
 }
 
