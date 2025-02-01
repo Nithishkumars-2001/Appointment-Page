@@ -2,85 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teachers Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Appointment Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .achievement-box {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .card {
+            border-radius: 15px;
         }
-        .progress {
-            height: 10px;
+        .dashboard-header {
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-
-<div class="container mt-5">
-    <div class="row g-4">
-        <!-- Teachers Achievement Box -->
-        <div class="col-md-4">
-            <div class="achievement-box text-center">
-                <h4 class="text-primary">Teachers Achievements</h4>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">🏆 Best Teacher Award - 2024</li>
-                    <li class="list-group-item">📜 Published 15+ Research Papers</li>
-                    <li class="list-group-item">🎤 Guest Speaker in 20+ Seminars</li>
-                </ul>
-            </div>
+    <div class="container mt-4">
+        <div class="dashboard-header">
+            <h2>Student Appointment Dashboard</h2>
         </div>
-
-        <!-- Teachers Placement Helps -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title text-success">Teachers Placement Helps</h4>
-                    <p>Our teachers have guided students to top companies:</p>
-                    <ul>
-                        <li>Google - 15 Students</li>
-                        <li>Microsoft - 10 Students</li>
-                        <li>Amazon - 12 Students</li>
-                        <li>Infosys - 20 Students</li>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Upcoming Appointments</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Math Tutoring - Feb 2, 10:00 AM</li>
+                        <li class="list-group-item">Science Workshop - Feb 5, 2:00 PM</li>
+                        <li class="list-group-item">History Session - Feb 7, 11:30 AM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Book a New Appointment</h5>
+                    <button class="btn btn-primary w-100">Schedule Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Notifications</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Reminder: Math Tutoring tomorrow at 10:00 AM</li>
+                        <li class="list-group-item">New session available: Physics Workshop</li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Teachers Teaching Level -->
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title text-danger">Teachers Teaching Level</h4>
-                    <p>Overall Teaching Proficiency:</p>
-                    <div class="mb-2">🖥️ Technical Skills
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="mb-2">📖 Subject Knowledge
-                        <div class="progress">
-                            <div class="progress-bar bg-success" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="mb-2">🗣️ Communication Skills
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="mb-2">📚 Research & Innovation
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
